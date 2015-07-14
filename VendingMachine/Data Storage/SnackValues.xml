@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Snacks>
+  <Type Name="Chips">
+    <Company Name="Frito-Lay">
+      <Brand>
+        <name>Doritos</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+      <Brand>
+        <name>Tostitos</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+      <Brand>
+        <name>Ruffles</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+      <Brand>
+        <name>Lays</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+    </Company>
+  </Type>
+  <Type Name="Chocolate">
+    <Company Name="Mars">
+      <Brand>
+        <name>Snickers</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+      <Brand>
+        <name>Muskeeters</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+      <Brand>
+        <name>Dove</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+      <Brand>
+        <name>Twix</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+    </Company>
+  </Type>
+  <Type Name="Cookies">
+    <Company Name="Nabisco">
+      <Brand>
+        <name>Chips Ahoy</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+      <Brand>
+        <name>Oreos</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+      <Brand>
+        <name>Ritz</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+      <Brand>
+        <name>Wheat Thins</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+    </Company>
+  </Type>
+  <Type Name="Gum">
+    <Company Name="Wrigley">
+      <Brand>
+        <name>Juicy Fruit</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+      <Brand>
+        <name>Spearmint</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+      <Brand>
+        <name>Big Red</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+      <Brand>
+        <name>Extra</name>
+        <amount>0</amount>
+        <price>0.00</price>
+      </Brand>
+    </Company>
+  </Type>
+</Snacks>
