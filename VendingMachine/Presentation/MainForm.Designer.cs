@@ -58,7 +58,7 @@
             this.snack4_1Button = new System.Windows.Forms.Button();
             this.snack3_1Button = new System.Windows.Forms.Button();
             this.snack2_1Button = new System.Windows.Forms.Button();
-            this.snack1_1 = new System.Windows.Forms.Button();
+            this.snack1_1Button = new System.Windows.Forms.Button();
             this.mainTxtDisplay = new System.Windows.Forms.TextBox();
             this.enterMoneyLabel = new System.Windows.Forms.Label();
             this.enterMoneyTxtBox = new System.Windows.Forms.TextBox();
@@ -89,7 +89,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -174,7 +174,7 @@
             this.tableLayoutPanel1.Controls.Add(this.snack4_1Button, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.snack3_1Button, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.snack2_1Button, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.snack1_1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.snack1_1Button, 0, 0);
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 27);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -192,6 +192,7 @@
             this.snack4_5Button.Name = "snack4_5Button";
             this.snack4_5Button.Size = new System.Drawing.Size(78, 120);
             this.snack4_5Button.TabIndex = 19;
+            this.snack4_5Button.TabStop = false;
             this.snack4_5Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack4_5Button.UseVisualStyleBackColor = true;
             // 
@@ -201,6 +202,7 @@
             this.snack3_5Button.Name = "snack3_5Button";
             this.snack3_5Button.Size = new System.Drawing.Size(78, 120);
             this.snack3_5Button.TabIndex = 18;
+            this.snack3_5Button.TabStop = false;
             this.snack3_5Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack3_5Button.UseVisualStyleBackColor = true;
             // 
@@ -210,6 +212,7 @@
             this.snack2_5Button.Name = "snack2_5Button";
             this.snack2_5Button.Size = new System.Drawing.Size(78, 120);
             this.snack2_5Button.TabIndex = 17;
+            this.snack2_5Button.TabStop = false;
             this.snack2_5Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack2_5Button.UseVisualStyleBackColor = true;
             // 
@@ -219,6 +222,7 @@
             this.snack1_5Button.Name = "snack1_5Button";
             this.snack1_5Button.Size = new System.Drawing.Size(78, 120);
             this.snack1_5Button.TabIndex = 16;
+            this.snack1_5Button.TabStop = false;
             this.snack1_5Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack1_5Button.UseVisualStyleBackColor = true;
             // 
@@ -228,6 +232,7 @@
             this.snack4_4Button.Name = "snack4_4Button";
             this.snack4_4Button.Size = new System.Drawing.Size(78, 120);
             this.snack4_4Button.TabIndex = 15;
+            this.snack4_4Button.TabStop = false;
             this.snack4_4Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack4_4Button.UseVisualStyleBackColor = true;
             // 
@@ -237,6 +242,7 @@
             this.snack3_4Button.Name = "snack3_4Button";
             this.snack3_4Button.Size = new System.Drawing.Size(78, 120);
             this.snack3_4Button.TabIndex = 14;
+            this.snack3_4Button.TabStop = false;
             this.snack3_4Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack3_4Button.UseVisualStyleBackColor = true;
             // 
@@ -246,6 +252,7 @@
             this.snack2_4Button.Name = "snack2_4Button";
             this.snack2_4Button.Size = new System.Drawing.Size(78, 120);
             this.snack2_4Button.TabIndex = 13;
+            this.snack2_4Button.TabStop = false;
             this.snack2_4Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack2_4Button.UseVisualStyleBackColor = true;
             // 
@@ -255,6 +262,7 @@
             this.snack1_4Button.Name = "snack1_4Button";
             this.snack1_4Button.Size = new System.Drawing.Size(78, 120);
             this.snack1_4Button.TabIndex = 12;
+            this.snack1_4Button.TabStop = false;
             this.snack1_4Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack1_4Button.UseVisualStyleBackColor = true;
             // 
@@ -264,6 +272,7 @@
             this.snack4_3Button.Name = "snack4_3Button";
             this.snack4_3Button.Size = new System.Drawing.Size(78, 120);
             this.snack4_3Button.TabIndex = 11;
+            this.snack4_3Button.TabStop = false;
             this.snack4_3Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack4_3Button.UseVisualStyleBackColor = true;
             // 
@@ -273,6 +282,7 @@
             this.snack3_3Button.Name = "snack3_3Button";
             this.snack3_3Button.Size = new System.Drawing.Size(78, 120);
             this.snack3_3Button.TabIndex = 10;
+            this.snack3_3Button.TabStop = false;
             this.snack3_3Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack3_3Button.UseVisualStyleBackColor = true;
             // 
@@ -282,6 +292,7 @@
             this.snack2_3Button.Name = "snack2_3Button";
             this.snack2_3Button.Size = new System.Drawing.Size(78, 120);
             this.snack2_3Button.TabIndex = 9;
+            this.snack2_3Button.TabStop = false;
             this.snack2_3Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack2_3Button.UseVisualStyleBackColor = true;
             // 
@@ -291,6 +302,7 @@
             this.snack1_3Button.Name = "snack1_3Button";
             this.snack1_3Button.Size = new System.Drawing.Size(78, 120);
             this.snack1_3Button.TabIndex = 8;
+            this.snack1_3Button.TabStop = false;
             this.snack1_3Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack1_3Button.UseVisualStyleBackColor = true;
             // 
@@ -300,6 +312,7 @@
             this.snack4_2Button.Name = "snack4_2Button";
             this.snack4_2Button.Size = new System.Drawing.Size(78, 120);
             this.snack4_2Button.TabIndex = 7;
+            this.snack4_2Button.TabStop = false;
             this.snack4_2Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack4_2Button.UseVisualStyleBackColor = true;
             // 
@@ -309,6 +322,7 @@
             this.snack3_2Button.Name = "snack3_2Button";
             this.snack3_2Button.Size = new System.Drawing.Size(78, 120);
             this.snack3_2Button.TabIndex = 6;
+            this.snack3_2Button.TabStop = false;
             this.snack3_2Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack3_2Button.UseVisualStyleBackColor = true;
             // 
@@ -318,6 +332,7 @@
             this.snack2_2Button.Name = "snack2_2Button";
             this.snack2_2Button.Size = new System.Drawing.Size(78, 120);
             this.snack2_2Button.TabIndex = 5;
+            this.snack2_2Button.TabStop = false;
             this.snack2_2Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack2_2Button.UseVisualStyleBackColor = true;
             // 
@@ -327,6 +342,7 @@
             this.snack1_2Button.Name = "snack1_2Button";
             this.snack1_2Button.Size = new System.Drawing.Size(78, 120);
             this.snack1_2Button.TabIndex = 4;
+            this.snack1_2Button.TabStop = false;
             this.snack1_2Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack1_2Button.UseVisualStyleBackColor = true;
             // 
@@ -336,6 +352,7 @@
             this.snack4_1Button.Name = "snack4_1Button";
             this.snack4_1Button.Size = new System.Drawing.Size(78, 120);
             this.snack4_1Button.TabIndex = 3;
+            this.snack4_1Button.TabStop = false;
             this.snack4_1Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack4_1Button.UseVisualStyleBackColor = true;
             // 
@@ -345,6 +362,7 @@
             this.snack3_1Button.Name = "snack3_1Button";
             this.snack3_1Button.Size = new System.Drawing.Size(78, 120);
             this.snack3_1Button.TabIndex = 2;
+            this.snack3_1Button.TabStop = false;
             this.snack3_1Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack3_1Button.UseVisualStyleBackColor = true;
             // 
@@ -354,17 +372,19 @@
             this.snack2_1Button.Name = "snack2_1Button";
             this.snack2_1Button.Size = new System.Drawing.Size(78, 120);
             this.snack2_1Button.TabIndex = 1;
+            this.snack2_1Button.TabStop = false;
             this.snack2_1Button.Text = "Sorry,\r\nThis Is Empty";
             this.snack2_1Button.UseVisualStyleBackColor = true;
             // 
-            // snack1_1
+            // snack1_1Button
             // 
-            this.snack1_1.Location = new System.Drawing.Point(6, 6);
-            this.snack1_1.Name = "snack1_1";
-            this.snack1_1.Size = new System.Drawing.Size(78, 120);
-            this.snack1_1.TabIndex = 0;
-            this.snack1_1.Text = "Sorry,\r\nThis Is Empty";
-            this.snack1_1.UseVisualStyleBackColor = true;
+            this.snack1_1Button.Location = new System.Drawing.Point(6, 6);
+            this.snack1_1Button.Name = "snack1_1Button";
+            this.snack1_1Button.Size = new System.Drawing.Size(78, 120);
+            this.snack1_1Button.TabIndex = 0;
+            this.snack1_1Button.TabStop = false;
+            this.snack1_1Button.Text = "Sorry,\r\nThis Is Empty";
+            this.snack1_1Button.UseVisualStyleBackColor = true;
             // 
             // mainTxtDisplay
             // 
@@ -392,11 +412,11 @@
             // 
             // enterMoneyTxtBox
             // 
-            this.enterMoneyTxtBox.Font = new System.Drawing.Font("Centaur", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterMoneyTxtBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterMoneyTxtBox.Location = new System.Drawing.Point(458, 291);
             this.enterMoneyTxtBox.Name = "enterMoneyTxtBox";
-            this.enterMoneyTxtBox.Size = new System.Drawing.Size(168, 20);
-            this.enterMoneyTxtBox.TabIndex = 6;
+            this.enterMoneyTxtBox.Size = new System.Drawing.Size(168, 26);
+            this.enterMoneyTxtBox.TabIndex = 1;
             // 
             // inserMoneyBtn
             // 
@@ -404,7 +424,7 @@
             this.inserMoneyBtn.Location = new System.Drawing.Point(458, 349);
             this.inserMoneyBtn.Name = "inserMoneyBtn";
             this.inserMoneyBtn.Size = new System.Drawing.Size(168, 62);
-            this.inserMoneyBtn.TabIndex = 7;
+            this.inserMoneyBtn.TabIndex = 2;
             this.inserMoneyBtn.Text = "Insert Money";
             this.inserMoneyBtn.UseVisualStyleBackColor = true;
             // 
@@ -441,7 +461,7 @@
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addASnackToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button snack1_1;
+        private System.Windows.Forms.Button snack1_1Button;
         private System.Windows.Forms.Button snack4_5Button;
         private System.Windows.Forms.Button snack3_5Button;
         private System.Windows.Forms.Button snack2_5Button;
