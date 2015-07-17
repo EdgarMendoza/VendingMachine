@@ -13,6 +13,13 @@ namespace VendingMachine.Data_Logic
         public int AmountPresent { get; set; }
         public double SnackPrice { get; set; }
 
+        public Gum()
+        {
+            CompanyName = "";
+            BrandName = "";
+            AmountPresent = 0;
+            SnackPrice = 0.00;
+        }
         public Gum(string company, string brand, int amount, double price)
         {
             CompanyName = company;

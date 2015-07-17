@@ -13,6 +13,7 @@ namespace VendingMachine.Data_Logic
         public List<ISnacks> SnacksPresent { get; set; }
         public double MoneyEntered { get; set; }
 
+        string directoryPath = @"Data Storage";
         //Order: chips, chocolate, cookies, gum
         string[] filePaths = 
             {
@@ -25,11 +26,38 @@ namespace VendingMachine.Data_Logic
         public Machine()
         {
             CreateFiles();
+            SnacksPresent = new List<ISnacks>();
             RetrieveSnacksPresent();
         }
 
-        public void AddMoney(int amount, int snackChoice)
+        public void PrintSnackList()
         {
+            string output = String.Empty;
+            foreach(ISnacks snack in SnacksPresent)
+            {
+                output += (CreateOutputLine(snack) + "\n");
+            }
+            MessageBox.Show(output);
+        }
+
+        //Receives information about a snack and adds it to the list according to the type recieved
+        public void AddSnack(string type, string company, string brand, int amount, double price)
+        {
+            if (type == "Chips")
+                SnacksPresent.Add(new Chips(company, brand, amount, price));
+            else if (type == "Chocolate")
+                SnacksPresent.Add(new Chocolate(company, brand, amount, price));
+            else if (type == "Cookies")
+                SnacksPresent.Add(new Cookies(company, brand, amount, price));
+            else if (type == "Gum")
+                SnacksPresent.Add(new Gum(company, brand, amount, price));
+        }
+        //Receives the amount of money inserted and the snack choice
+        //Is the main starting point after the user enters money and a snack choice
+        public void AddMoney(double amount, int snackChoice)
+        {
+            MoneyEntered = amount;
+
 
         }
 
@@ -65,50 +93,89 @@ namespace VendingMachine.Data_Logic
             return String.Format(message + "\n" + thanksGreeting);
         }
 
+        //Saves the List SnacksPresent into text files according to the type of snack
         public void SaveSnacksPresent()
         {
-            StreamWriter sWriter = null;
-            string output = null;
+            List<ISnacks> snackType = new List<ISnacks>();
 
             try
             {
-                foreach(string path in filePaths)
+                foreach(string filePath in filePaths)
                 {
-                    if (File.Exists(path))
-                        File.Delete(path);
+                    if (File.Exists(filePath))
+                        File.Delete(filePath);
 
-                    File.Create(path);
+                    File.Create(filePath).Dispose();
                 }
 
-                foreach(ISnacks snack in SnacksPresent)
+                //Save snacks of type Chips
+                foreach(ISnacks chips in SnacksPresent)
                 {
-                    output = String.Format("{0},{1},{2},{3:N2}", snack.CompanyName, snack.BrandName, snack.AmountPresent, snack.SnackPrice);
-
-                    if (snack is Cookies)
-                        sWriter = new StreamWriter(filePaths[0]);
-                    else if (snack is Chocolate)
-                        sWriter = new StreamWriter(filePaths[1]);
-                    else if (snack is Cookies)
-                        sWriter = new StreamWriter(filePaths[2]);
-                    else if (snack is Gum)
-                        sWriter = new StreamWriter(filePaths[3]);
-
-                    sWriter.WriteLine(output);
-                    sWriter = null;
+                    if (chips is Chips)
+                        snackType.Add(chips);
                 }
+                SaveSnackType(snackType, filePaths[0]);
+                snackType.Clear();
+
+                //Save snacks of type Chocolate
+                foreach(ISnacks chocolate in SnacksPresent)
+                {
+                    if(chocolate is Chocolate)
+                        snackType.Add(chocolate);
+                }
+                SaveSnackType(snackType, filePaths[1]);
+                snackType.Clear();
+
+                //Save snacks of type Cookies
+                foreach(ISnacks cookies in SnacksPresent)
+                {
+                    if (cookies is Cookies)
+                        snackType.Add(cookies);
+                }
+                SaveSnackType(snackType, filePaths[2]);
+                snackType.Clear();
+
+                //Save snacks of type Gum
+                foreach(ISnacks gum in SnacksPresent)
+                {
+                    if (gum is Gum)
+                        snackType.Add(gum);
+                }
+                SaveSnackType(snackType, filePaths[3]);
+                snackType.Clear();
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
+        }
+
+        private string CreateOutputLine(ISnacks snack)
+        {
+            return String.Format("{0},{1},{2},{3:N2}", snack.CompanyName, snack.BrandName, snack.AmountPresent, snack.SnackPrice);
+        }
+        private void SaveSnackType(List<ISnacks> snackType, string path)
+        {
+            string output = null;
+            using(StreamWriter sWriter = new StreamWriter(path))
             {
-                sWriter.Flush();
-                sWriter.Close();
+                foreach(ISnacks snack in snackType)
+                {
+                    output = CreateOutputLine(snack);
+                    sWriter.WriteLine(output);
+                }
             }
         }
 
+        //Retrieves the snancks saved in the text files and adds them to the SnackPresent List
         public void RetrieveSnacksPresent()
+        {
+            foreach(string path in filePaths)
+            {
+                ReadSnackType(path);
+            }
+        }
+        private void ReadSnackType(string path)
         {
             string line;
             bool finished = false;
@@ -118,11 +185,9 @@ namespace VendingMachine.Data_Logic
 
             try
             {
-                foreach(string path in filePaths)
+                using (sr = new StreamReader(path))
                 {
-                    sr = new StreamReader(path);
-
-                    while(!(finished))
+                    while (!(finished))
                     {
                         line = sr.ReadLine();
 
@@ -150,18 +215,25 @@ namespace VendingMachine.Data_Logic
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
-            {
-                sr.Close();
-            }
         }
 
+        //Is called in the constructor and will create the directory and blank files if they do not already exist
         public void CreateFiles()
         {
-            foreach (string path in filePaths)
+            try
             {
-                if (!(File.Exists(path)))
-                    File.Create(path);
+                if (!(Directory.Exists(directoryPath)))
+                    Directory.CreateDirectory(directoryPath);
+
+                foreach (string path in filePaths)
+                {
+                    if (!File.Exists(path))
+                        File.Create(path).Dispose();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

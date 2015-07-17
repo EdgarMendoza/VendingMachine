@@ -13,7 +13,7 @@ namespace VendingMachine.Data_Logic
         double MoneyEntered { get; set; }
 
 
-        void AddMoney(int amount, int snackChoice);
+        void AddMoney(double amount, int snackChoice);
 
         //Will take the index of the snack chosen and return a string message
         //Will call the ReturnMoney method
