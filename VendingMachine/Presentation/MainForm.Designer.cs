@@ -63,6 +63,7 @@
             this.enterMoneyLabel = new System.Windows.Forms.Label();
             this.enterMoneyTxtBox = new System.Windows.Forms.TextBox();
             this.inserMoneyBtn = new System.Windows.Forms.Button();
+            this.seeSnacksPresentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -89,7 +90,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -97,7 +98,8 @@
             // 
             this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.autoAddSnacksToolStripMenuItem,
-            this.addASnackToolStripMenuItem});
+            this.addASnackToolStripMenuItem,
+            this.seeSnacksPresentListToolStripMenuItem});
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
             this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.adminToolStripMenuItem.Text = "Admin";
@@ -110,7 +112,7 @@
             this.add5OfEachToolStripMenuItem,
             this.add10OfEachToolStripMenuItem});
             this.autoAddSnacksToolStripMenuItem.Name = "autoAddSnacksToolStripMenuItem";
-            this.autoAddSnacksToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.autoAddSnacksToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.autoAddSnacksToolStripMenuItem.Text = "Auto-Add Snacks";
             this.autoAddSnacksToolStripMenuItem.ToolTipText = "Adds snacks with pre-created information\r\nWill replace all snacks currently prese" +
     "nt";
@@ -118,31 +120,32 @@
             // add1OfEachToolStripMenuItem
             // 
             this.add1OfEachToolStripMenuItem.Name = "add1OfEachToolStripMenuItem";
-            this.add1OfEachToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.add1OfEachToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.add1OfEachToolStripMenuItem.Text = "Add 1";
+            this.add1OfEachToolStripMenuItem.Click += new System.EventHandler(this.add1OfEachToolStripMenuItem_Click);
             // 
             // add3OfEachToolStripMenuItem
             // 
             this.add3OfEachToolStripMenuItem.Name = "add3OfEachToolStripMenuItem";
-            this.add3OfEachToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.add3OfEachToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.add3OfEachToolStripMenuItem.Text = "Add 3";
             // 
             // add5OfEachToolStripMenuItem
             // 
             this.add5OfEachToolStripMenuItem.Name = "add5OfEachToolStripMenuItem";
-            this.add5OfEachToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.add5OfEachToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.add5OfEachToolStripMenuItem.Text = "Add 5";
             // 
             // add10OfEachToolStripMenuItem
             // 
             this.add10OfEachToolStripMenuItem.Name = "add10OfEachToolStripMenuItem";
-            this.add10OfEachToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.add10OfEachToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.add10OfEachToolStripMenuItem.Text = "Add 10";
             // 
             // addASnackToolStripMenuItem
             // 
             this.addASnackToolStripMenuItem.Name = "addASnackToolStripMenuItem";
-            this.addASnackToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.addASnackToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.addASnackToolStripMenuItem.Text = "Add a Snack";
             this.addASnackToolStripMenuItem.Click += new System.EventHandler(this.addASnackToolStripMenuItem_Click);
             // 
@@ -428,6 +431,13 @@
             this.inserMoneyBtn.Text = "Insert Money";
             this.inserMoneyBtn.UseVisualStyleBackColor = true;
             // 
+            // seeSnacksPresentListToolStripMenuItem
+            // 
+            this.seeSnacksPresentListToolStripMenuItem.Name = "seeSnacksPresentListToolStripMenuItem";
+            this.seeSnacksPresentListToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.seeSnacksPresentListToolStripMenuItem.Text = "See SnacksPresentList";
+            this.seeSnacksPresentListToolStripMenuItem.Click += new System.EventHandler(this.seeSnacksPresentListToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,6 +500,7 @@
         private System.Windows.Forms.ToolStripMenuItem add3OfEachToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem add5OfEachToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem add10OfEachToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seeSnacksPresentListToolStripMenuItem;
     }
 }
 

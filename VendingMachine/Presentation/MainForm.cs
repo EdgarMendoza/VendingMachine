@@ -22,6 +22,8 @@ namespace VendingMachine
         {
             InitializeComponent();
             mainTxtDisplay.Text = idleMessage;
+
+            InitializePreMadeSnacks();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -59,6 +61,18 @@ namespace VendingMachine
         private void saveButton_Click(object sender, EventArgs e)
         {
             machine1.SaveSnacksPresent();
+        }
+
+        private void add1OfEachToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int snackAmount = 1;
+
+            AddSnackToSlot(snackAmount);
+        }
+
+        private void seeSnacksPresentListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            machine1.PrintSnackList();
         }
     }
 }
