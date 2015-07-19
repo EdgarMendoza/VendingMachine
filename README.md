@@ -8,4 +8,4 @@ Translated into C#, added GUI, and storage ability.
 
 Current Screenshot:
 
-![alt tag](https://github.com/EdgarMendoza/VendingMachine/blob/master/ProgramScreenshots/vendingMachineScreenshot_7_16_2015.png)
+![alt tag](https://github.com/EdgarMendoza/VendingMachine/blob/master/ProgramScreenshots/vendingMachineScreenshot_7_19_2015.png)
